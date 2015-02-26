@@ -1,13 +1,15 @@
 ---
 driver:
   name: vagrant
+  provider: hyperv
 
 provisioner:
   name: chef_solo
 
 platforms:
   - name: ubuntu-12.04
-  - name: centos-6.4
+    driver:
+      box: hashicorp/precise64
 
 suites:
   - name: default
